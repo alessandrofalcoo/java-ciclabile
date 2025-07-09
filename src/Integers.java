@@ -2,8 +2,21 @@ public class Integers {
     int[] integers;
     private int indiceCorrente = 0;
 
+    public Integers() {
+        this.integers = new int[0];
+    }
+
     public Integers(int[] elenco) {
         this.integers = elenco;
+    }
+
+    public void addElemento(int nuovo) {
+        int[] nuovoArray = new int[integers.length + 1];
+        for (int i = 0; i < integers.length; i++) {
+            nuovoArray[i] = integers[i];
+        }
+        nuovoArray[integers.length] = nuovo;
+        this.integers = nuovoArray;
     }
 
     public int getElementoSuccessivo() {
