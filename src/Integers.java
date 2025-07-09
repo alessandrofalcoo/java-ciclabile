@@ -1,6 +1,10 @@
 public class Integers {
-    int[] integers = { 1, 2, 4, 6, 28, 29, 40 };
+    int[] integers;
     private int indiceCorrente = 0;
+
+    public Integers(int[] elenco) {
+        this.integers = elenco;
+    }
 
     public int getElementoSuccessivo() {
         if (indiceCorrente < integers.length - 1) {
