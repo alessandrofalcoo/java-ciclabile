@@ -19,4 +19,17 @@ public class Integers {
         return indiceCorrente < integers.length - 1;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("");
+        for (int i = 0; i < integers.length; i++) {
+            sb.append(integers[i]);
+            if (i < integers.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("");
+        return sb.toString();
+    }
 }
